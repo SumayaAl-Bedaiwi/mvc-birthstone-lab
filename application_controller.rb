@@ -10,4 +10,12 @@ class MyApp < Sinatra::Base
 
   
   
+  post '/birthstone' do
+    user_month = params[:month]
+    @user_stone = choose_gem(user_month)
+    
+    erb :results
+  end
+  
+  
 end
